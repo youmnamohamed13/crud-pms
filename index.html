@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  <!-- bootstrap css file -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="./css/min.css">
+<title>CRUDS</title>
+</head>
+
+<body class="">
+  
+  <div class="container py-5">
+    <h1>Product <span class="text-danger">management</span>  system</h1>
+
+    <div class="my-5">
+
+      <div class="my-4 form-group name">
+        <label for="productName " class=" fw-bold">product Name</label>
+        <input  type="text" id="productName" placeholder="enter product Name" class="form-control">
+        <p id="massName" class="text-danger d-none">pleas enter name with 4 capital char</p>
+      </div>
+
+      <div class="my-4 form-group price">
+        <label for="productPrice " class=" fw-bold">product Price</label>
+        <input  type="number" id="productPrice" placeholder="enter product Price" class="form-control">
+        <p id="massPrice" class="text-danger d-none">Please enter the product price</p>
+
+      </div>
+
+      <div class="my-4 form-group categry">
+        <label for="productCategry" class=" fw-bold">product Categry</label>
+        <input  type="text" id="productCategry" placeholder="enter product Categry" class="form-control">
+        <p id="massCategry" class="text-danger d-none">Please enter a one-letter category from A to Z</p>
+
+      </div>
+
+      <div class="my-4 form-group description">
+        <label for="productDesc" class="fw-bold">product description</label>
+        <input  onin type="text" id="productDesc" placeholder="enter your opinion product description" class="form-control">
+        <p id="massDesc" class="text-danger d-none">Please enter a description of the product</p>
+      </div>
+
+      <button class="btn btn-primary" id="addpoduct" > add product</button>
+      <button class="btn btn-success d-none saveChangeBtn" id="saveBtn">save changes</button>
+      
+      <input type="text" placeholder="search with product name" class="form-control my-4" oninput="searchProduct(this.value)" >
+
+
+    </div>
+
+
+
+    <table class="table table-group-divider table-hover tab-pane table-striped table-secondary text-center my-5 ">
+
+      <thead >
+        <th>index</th>
+        <th>productname</th>
+        <th>productprice</th>
+        <th>productcatagery</th>
+        <th>productdesc</th>
+        <th>update</th>
+        <th>delete</th>
+      </thead>
+      <tbody id="bodyTable">
+
+
+      </tbody>
+    </table>
+</div>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/mina.js"></script>
+</body>
+
+</html>
