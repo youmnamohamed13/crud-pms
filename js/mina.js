@@ -14,7 +14,7 @@ function localStorageUpdate() {
 var addproductBtn =document.getElementById("addpoduct");
 addproductBtn.addEventListener('click',addproduct)
 function addproduct() {
-    if (validName() | validPrice() | validCategry() | validDesc()) {
+    if (validName() & validPrice() & validCategry() & validDesc()) {
         var product = {
             name: productName.value,
             Price: productPrice.value,
@@ -27,7 +27,7 @@ function addproduct() {
         validName();
         validPrice();
         validCategry()
-        validDesc()
+        validDesc();
         clearInput();
         saveBtn.classList.add("d-none");
     }
